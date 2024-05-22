@@ -130,10 +130,10 @@ else
 fi
 
 # Load Aliases
-if [ -f ~/.aliases ]; then
-    source ~/.aliases
+if [ -f ~/dotfiles/zsh/aliases/.aliases ]; then
+    source ~/dotfiles/zsh/aliases/.aliases
 else
-    print "404: ~/.aliases not found."
+    print "404: ~/dotfiles/zsh/aliases/.aliases"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

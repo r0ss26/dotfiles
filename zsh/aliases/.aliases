@@ -1,0 +1,18 @@
+# Docker
+alias docker.stop="docker stop \$(docker ps --format '{{.Names}}' -a -q)"
+alias docker.info="docker system df"
+alias docker.info.containers="docker ps --format '{{.ID}} {{.Names}}'"
+alias docker.info.containers="docker ps --format '{{.ID}} {{.Names}}'"
+alias dockerupd="docker-compose up -d"
+alias dockerup="docker-compose up"
+alias docker.nuke='docker rm -f -v $(docker ps -aq) && docker rmi -f $(docker images -q) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q)'
+
+# Git
+alias gpfwl='git push --force-with-lease'
+
+# DNS
+alias localdns="networksetup -setdnsservers Wi-Fi 127.0.0.1"
+alias unsetdns="networksetup -setdnsservers Wi-Fi empty"
+alias setdns="networksetup -setdnsservers Wi-Fi "$1
+alias getdns="networksetup -getdnsservers Wi-Fi"
+
