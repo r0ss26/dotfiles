@@ -30,6 +30,7 @@ create_symlink "$(pwd)/zsh/powerlevel10k/.p10k.zsh" "$HOME/.p10k.zsh"
 # Add other symlinks as needed
 create_symlink "$(pwd)/vim/.vimrc" "$HOME/.vimrc"
 create_symlink "$(pwd)/tmux/.tmux.conf" "$HOME/.tmux.conf"
+create_symlink "$(pwd)/vim/.ideavimrc" "$HOME/.ideavimrc"
 
 echo "Symlinks setup complete!"
 
