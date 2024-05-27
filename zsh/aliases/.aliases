@@ -16,3 +16,5 @@ alias unsetdns="networksetup -setdnsservers Wi-Fi empty"
 alias setdns="networksetup -setdnsservers Wi-Fi "$1
 alias getdns="networksetup -getdnsservers Wi-Fi"
 
+# Navigation
+alias dotfiles="cd ~/dotfiles"
