@@ -18,7 +18,3 @@ alias getdns="networksetup -getdnsservers Wi-Fi"
 
 # Navigation
 alias dotfiles="cd ~/dotfiles"
-
-# File Explorer
-alias ls="colorls"
-alias la="colorls -a"
