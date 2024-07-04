@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 
 # Function to create a symlink and handle errors
 create_symlink() {
