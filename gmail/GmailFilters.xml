@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+    <title>GitHub filters</title>
+    <entry>
+        <category term='filter'></category>
+        <content></content>
+        <apps:property name="from" value="notifications@github.com"/>
+        <apps:property name='hasTheWord' value='"Merged into"'/>
+        <apps:property name='label' value='GitHub/Merged'/>
+        <apps:property name="shouldArchive" value="true"/>
+        <apps:property name="shouldMarkAsRead" value="true"/>
+    </entry>
+    <entry>
+        <category term='filter'></category>
+        <content></content>
+        <apps:property name="from" value="notifications@github.com"/>
+        <apps:property name='hasTheWord' value='"@r0ss26"'/>
+        <apps:property name='label' value='GitHub/Mention'/>
+    </entry>
+    <entry>
+        <category term='filter'></category>
+        <content></content>
+        <apps:property name="from" value="notifications@github.com"/>
+        <apps:property name='hasTheWord' value='"because you authored the thread"'/>
+        <apps:property name='label' value='GitHub/Author'/>
+    </entry>
+    <entry>
+        <category term='filter'></category>
+        <content></content>
+        <apps:property name="from" value="notifications@github.com"/>
+        <apps:property name='hasTheWord' value='"modified the open/close state"'/>
+        <apps:property name='label' value='GitHub/Reopened'/>
+        <apps:property name="shouldArchive" value="true"/>
+        <apps:property name="shouldMarkAsRead" value="true"/>
+    </entry>
+    <entry>
+        <category term='filter'></category>
+        <content></content>
+        <apps:property name="from" value="notifications@github.com"/>
+        <apps:property name='hasTheWord' value='"requested review from @DeputyApp/payroll"'/>
+        <apps:property name='label' value='GitHub/Payroll'/>
+        <apps:property name="shouldArchive" value="true"/>
+    </entry>
+    <entry>
+        <category term='filter'></category>
+        <content></content>
+        <apps:property name="from" value="notifications@github.com"/>
+        <apps:property name="hasTheWord" value='"PAYX"'/>
+        <apps:property name='label' value='GitHub/Payroll'/>
+        <apps:property name="shouldArchive" value="true"/>
+    </entry>
+    <entry>
+        <category term='filter'></category>
+        <content></content>
+        <apps:property name="from" value="notifications@github.com"/>
+        <apps:property name='hasTheWord' value='"Closed &#35;" AND "You are receiving this because"'/>
+        <apps:property name='doesNotHaveTheWord' value='dependabot'/>
+        <apps:property name='label' value='GitHub/Closed'/>
+        <apps:property name="shouldArchive" value="true"/>
+        <apps:property name="shouldMarkAsRead" value="true"/>
+    </entry>
+    <entry>
+        <category term='filter'></category>
+        <content></content>
+        <apps:property name="from" value="notifications@github.com"/>
+        <apps:property name='hasTheWord' value='"requested your review on"'/>
+        <apps:property name='label' value='GitHub/Direct review request'/>
+    </entry>
+    <!-- Catch-All Filter -->
+    <entry>
+        <category term='filter'></category>
+        <content></content>
+        <apps:property name="from" value="notifications@github.com"/>
+        <apps:property name="hasTheWord"
+                       value='-"Merged into" -"@r0ss26" -"because you authored the thread" -"modified the open/close state" -"requested review from @DeputyApp/payroll" -"PAYX" -"Closed &#35;" -"requested your review on"'/>
+        <apps:property name='label' value='GitHub/Miscellaneous'/>
+        <apps:property name="shouldMarkAsRead" value="true"/>
+        <apps:property name="shouldArchive" value="true"/>
+    </entry>
+</feed>
