@@ -5,7 +5,7 @@
         <category term='filter'></category>
         <content></content>
         <apps:property name="from" value="notifications@github.com"/>
-        <apps:property name='hasTheWord' value='"Merged into"'/>
+        <apps:property name='hasTheWord' value='"Merged #"'/>
         <apps:property name='label' value='GitHub/Merged'/>
         <apps:property name="shouldArchive" value="true"/>
         <apps:property name="shouldMarkAsRead" value="true"/>
