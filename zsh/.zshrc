@@ -15,7 +15,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 zstyle ':omz:update' mode auto      # update automatically without asking
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(git z fzf zsh-autosuggestions zsh-syntax-highlighting colored-man-pages extract)
+plugins=(git fzf zsh-autosuggestions zsh-syntax-highlighting colored-man-pages extract)
 source "$ZSH/oh-my-zsh.sh"
 
 if [[ -n $SSH_CONNECTION ]]; then
@@ -76,6 +76,13 @@ _tmux_title_preexec() { print -rn $'\e]2;'"$1"$'\e\\' }                       # 
 _tmux_title_precmd()  { print -rn $'\e]2;'"zsh: ${PWD/#$HOME/~}"$'\e\\' }     # reset to cwd when idle
 add-zsh-hook preexec _tmux_title_preexec
 add-zsh-hook precmd  _tmux_title_precmd
+
+# zoxide — smarter `z` (replaces the oh-my-zsh z plugin; ~/.z data imported)
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
+
+# atuin — searchable shell history shared across all panes/sessions (Ctrl-R).
+# Up-arrow keeps plain zsh history; drop the flag to let atuin take it over.
+command -v atuin >/dev/null && eval "$(atuin init zsh --disable-up-arrow)"
 
 # Work/machine-specific config (corporate CA bundles, employer aliases, etc.)
 # lives in ~/.zshrc.local, which is deliberately not tracked in this repo.
