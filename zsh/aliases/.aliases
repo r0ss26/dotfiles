@@ -18,3 +18,4 @@ alias getdns="networksetup -getdnsservers Wi-Fi"
 
 # Navigation
 alias dotfiles="cd ~/dotfiles"
+alias zshaliases="vim ~/dotfiles/zsh/aliases/.aliases"
